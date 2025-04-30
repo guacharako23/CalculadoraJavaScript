@@ -1,0 +1,134 @@
+:root {
+    --primary-color: #d50000; /* Rojo Junior */
+    --secondary-color: #0033a0; /* Azul Junior */
+    --accent-color: #ffffff; /* Blanco */
+    --danger-color: #c62828;
+    --success-color: #008744;
+    --light-color: #ffffff;
+    --dark-color: #1a1a1a;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.15);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.2);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--light-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.contenedor-calculadora {
+    background: var(--light-color);
+    border: 3px solid var(--accent-color);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: var(--shadow-lg);
+    max-width: 320px;
+    width: 100%;
+}
+
+.titulo {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.pantalla {
+    margin-bottom: 25px;
+}
+
+.campo-resultado {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+    padding: 10px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 12px;
+    background: #f8f9fa;
+    color: var(--dark-color);
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    padding: 18px 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.boton-numero {
+    background: var(--light-color);
+    color: var(--dark-color);
+    border: 2px solid #ccc;
+}
+
+.boton-numero:hover {
+    background: #e0e0e0;
+}
+
+.boton-operador {
+    background: var(--primary-color);
+    color: var(--accent-color);
+}
+
+.boton-operador:hover {
+    background: #b71c1c;
+}
+
+.boton-limpiar {
+    background: var(--danger-color);
+    color: var(--accent-color);
+}
+
+.boton-limpiar:hover {
+    background: #8e0000;
+}
+
+.boton-igual {
+    grid-column: span 4;
+    background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+    color: var(--accent-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.boton-igual:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 400px) {
+    .contenedor-calculadora {
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .campo-resultado {
+        font-size: 1.5rem;
+        padding: 12px 15px;
+    }
+
+    button {
+        padding: 15px 0;
+        font-size: 1.1rem;
+    }
+}

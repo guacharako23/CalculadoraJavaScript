@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Calculadora</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="contenedor-calculadora">
+        <h1 class="titulo">Mi Calculadora</h1>
+        <div class="pantalla">
+            <input type="text" id="resultado" readonly class="campo-resultado">
+        </div>
+        <div class="botones">
+            <!-- Fila 1 -->
+            <button onclick="agregarNumero('7')" class="boton-numero">7</button>
+            <button onclick="agregarNumero('8')" class="boton-numero">8</button>
+            <button onclick="agregarNumero('9')" class="boton-numero">9</button>
+            <button onclick="agregarOperador('+')" class="boton-operador">+</button>
+            
+            <!-- Fila 2 -->
+            <button onclick="agregarNumero('4')" class="boton-numero">4</button>
+            <button onclick="agregarNumero('5')" class="boton-numero">5</button>
+            <button onclick="agregarNumero('6')" class="boton-numero">6</button>
+            <button onclick="agregarOperador('-')" class="boton-operador">-</button>
+            
+            <!-- Fila 3 -->
+            <button onclick="agregarNumero('1')" class="boton-numero">1</button>
+            <button onclick="agregarNumero('2')" class="boton-numero">2</button>
+            <button onclick="agregarNumero('3')" class="boton-numero">3</button>
+            <button onclick="agregarOperador('*')" class="boton-operador">×</button>
+            
+            <!-- Fila 4 -->
+            <button onclick="agregarNumero('0')" class="boton-numero">0</button>
+            <button onclick="agregarDecimal()" class="boton-numero">.</button>
+            <button onclick="limpiarPantalla()" class="boton-limpiar">C</button>
+            <button onclick="agregarOperador('/')" class="boton-operador">÷</button>
+            
+            <!-- Fila 5 - Botón igual -->
+            <button onclick="calcularResultado()" class="boton-igual">=</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
